@@ -15,6 +15,10 @@ class PageController extends Controller
     }
 
     public function blog(){
-        return view('blog');
+        $token = 'uToqL-cX3epRRMAURCxpU77v_rDyDNpRWFfRG2FN238';
+        $fotos = HTTP::get('https://api.unsplash.com/photos/?client_id='.$token);
+        $fotosArray = $fotos->json();
+
+        return view('blog', compact('fotosArray'));
     }
 }

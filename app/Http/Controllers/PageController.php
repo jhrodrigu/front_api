@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\Http;
 class PageController extends Controller
 {
     public function home(){
-        $fotos = HTTP::get('https://jsonplaceholder.typicode.com/users');
+        $token = 'uToqL-cX3epRRMAURCxpU77v_rDyDNpRWFfRG2FN238';
+        $fotos = HTTP::get('https://api.unsplash.com/photos/?client_id='.$token);
         $fotosArray = $fotos->json();
 
         return view('home', compact('fotosArray'));

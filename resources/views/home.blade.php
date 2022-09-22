@@ -5,7 +5,7 @@
 
     @foreach ($fotosArray as $fotos)
         <ul>
-            <li>{{ $fotos['name'] }}</li>
+            <li>{{ $fotos['id'] }}</li>
         </ul>
     @endforeach
 @endsection

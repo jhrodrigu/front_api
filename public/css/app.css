@@ -5,3 +5,12 @@ body {
 h2 {
     color: white;
 }
+
+.card {
+    width: 230px;
+    margin: 30px;
+}
+
+input :hover {
+    background: blue;
+}

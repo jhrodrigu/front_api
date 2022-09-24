@@ -5,15 +5,16 @@
 
     @foreach ($fotosArray as $fotos)
 
-        <div class="card" style="width: 18rem;">
-            <img src="{{ $fotos['urls']['small'] }}" class="card-img-top" alt="...">
+        <div class="form-check form-check-inline">
+                <img src="{{ $fotos['urls']['small'] }}">
+                <br>
             <div class="card-body">
               <p class="card-text">Creada: {{ $fotos['created_at'] }}
-                <input class="form-check-input" type="radio" id="selec"></p>
+                <input class="form-check-input" type="checkbox" value="{{$fotos['id']}}" name="{{$fotos['id']}}"></p>
             </div>
           </div>
-
-    @endforeach
+        @endforeach
+        <input type="submit" name="enviar" value="enviar" />
 @endsection
 
 

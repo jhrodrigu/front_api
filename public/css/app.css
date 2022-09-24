@@ -14,3 +14,7 @@ h2 {
 input :hover {
     background: blue;
 }
+
+img {
+    margin: 20px;
+}

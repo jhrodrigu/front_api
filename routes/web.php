@@ -17,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(PageController::class)->group(function(){
     Route::get('/', 'home')->name('home');
+    // Route::post('blog', 'blog')->name('blog');
 
 });
 
 
 Route::controller(FavoController::class)->group(function(){
-    Route::get('blog', 'blog')->name('blog');
+    Route::post('blog', 'blog')->name('blog');
 });
 

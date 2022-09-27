@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
 class FavoController extends Controller
 {
@@ -20,7 +20,8 @@ class FavoController extends Controller
                     $current++;
                 }
             }
+            return view('blog', compact('selected'));
         }
-        return view('blog', compact('selected'));
+
     }
 }

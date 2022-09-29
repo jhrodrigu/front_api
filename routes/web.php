@@ -15,13 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// Aqui se crea las rutas que van asociadas a las paginas que se quieran crear
+
+// Esta es la ruta para la pagina principal o de imagenes
 Route::controller(PageController::class)->group(function(){
     Route::get('/', 'home')->name('home');
-    // Route::post('blog', 'blog')->name('blog');
 
 });
 
-
+// Esta es la ruta de favoritos, la cual trae la imagenes seleccionadas
 Route::controller(FavoController::class)->group(function(){
     Route::post('blog', 'blog')->name('blog');
 });

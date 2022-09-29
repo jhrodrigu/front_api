@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-
+{{-- Aqui esta la pagina principal, la cual muestra el navbar para navegar entre las 2 paginas --}}
     <div class="container">
     <ul class="nav">
         <li class="nav-item">
+            {{-- Aqui se crea el link para que al momento de precionar nos traiga la ruta que esta asociada a href, ya sea imagenes o favoritos --}}
           <a class="nav-link active" aria-current="page" href="{{ route('home') }}"> Fotografias </a>
         </li>
         <li class="nav-item">
@@ -22,6 +23,7 @@
       </ul>
     <hr>
 
+    {{-- Aqui se muestra el contenido de las fotos, la cual se trae atraves de una extencion con @yield, y el nombre de la views --}}
     @yield('content')
 </div>
 </body>
